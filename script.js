@@ -15,7 +15,7 @@ atualizarTabelas();
 // Função para atualizar a exibição da tabela HTML
 function atualizarTabelas() {
     atualizarTabelaMemoriaDeCodigo();
-    atualizarTabelaReg()
+    atualizarTabelaReg();
 }
 
 function atualizarTabelaMemoriaDeCodigo() {
