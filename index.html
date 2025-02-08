@@ -36,7 +36,7 @@
     
             <table id="tabelaRegSeletoriesDeSeg">
                 <thead>
-                    <tr><th colspan="2">Registradores seletores de seguimentos</th></tr>
+                    <tr><th colspan="2">Registradores seletores de seguimentos <br>(16 bits)</th></tr>
                 </thead>
                 <tbody>
                     <!-- Os dados da tabela serão inseridos aqui -->
@@ -44,18 +44,81 @@
             </table>
         </div>
         <div id="regSeletoresDedeslocameno">
-            <!-- <input type="text" id="valorInput" placeholder="Digite um valor">
-            <button id="addButton">Adicionar Item</button> -->
     
             <table id="tabelaRegDeslocamento">
                 <thead>
-                    <tr><th colspan="2">Registradores de deslocamento(OFFSET)</th></tr>
+                    <tr><th id = "XX" colspan='2'>Registradores de deslocamento(OFFSET)</th></tr>
                 </thead>
-                <tbody>
-                    <!-- Os dados da tabela serão inseridos aqui -->
-                </tbody>
+                <tr>
+                    <td>EIP</td>
+                    <td id ="valorEIP"></td> 
+                </tr>
+                <tr>
+                    <td>ESP</td>
+                    <td id = 'valorESP'></td>
+                </tr>
+                <tr>
+                    <td>EBP</td>
+                    <td id = 'valorEBP'></td>
+                </tr>
+                <tr>
+                    <td>EDI</td>
+                    <td id = 'valorEDI'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ESI</td>
+                    <td id = 'valorESI'></td>
+                </tr>        
             </table>
         </div>
+        <div id="regSeletoresGerais">
+    
+            <table id="tabelaRegGerais">
+                <thead>
+                    <button onclick="adicionarColuna()">Adicionar Coluna</button>
+                    <tr><th colspan="8">Registradores Gerais<br>(32 bits)</th></tr>
+                </thead>
+                <tr>
+                    <td>EAX</td><Td id = 'Valor EAX'></Td>
+                    <td>AX</td><td id = 'valor AX'></td>
+                    <td>AH</td><td id = 'valorAH'></td>
+                    <td>AL</td><td id = 'valorAL'></td>
+                </tr>
+                <tr>
+                    <td>EBX</td><Td id = 'Valor EBX'></Td>
+                    <td>BX</td><td id = 'valor BX'></td>
+                    <td>BH</td><td id = 'valorBH'></td>
+                    <td>BL</td><td id = 'valorBL'></td>
+                </tr>
+                <tr>
+                    <td>ECX</td><Td id = 'Valor ECX'></Td>
+                    <td>CX</td><td id = 'valor CX'></td>
+                    <td>CH</td><td id = 'valorCH'></td>
+                    <td>CL</td><td id = 'valorCL'></td>
+                </tr>
+                <tr>
+                    <td>EPX</td><Td id = 'Valor EPX'></Td>
+                    <td>PX</td><td id = 'valor PX'></td>
+                    <td>PH</td><td id = 'valorPH'></td>
+                    <td>PL</td><td id = 'valorPL'></td>
+                </tr>
+            </table>
+        </div>
+        <div id = "regFlag">
+            <table id = 'tabelaRegFlag'>
+                <thead>
+                    <tr><th colspan="2">Registrador Flag<br>(32 bits)</th></tr>
+                </thead>
+                <tr>
+                    <td>Flag</td><td id = 'Flag'></td>
+                </tr>
+               
+            </table>
+
+        </div>
+       
+        
     </main>
 
 

@@ -2,11 +2,41 @@
 let tabelaMemoriaDeCodigo = {};
 let enderecoMemoriaCodigo = 0o00;
 
+//valores redisradores de seguimentos
 let regSeletoresDeSegmentos = {
     "CS": "10000",
     "DS": "20000",
     "SS": "30000",
     "ES": "40000",
+    "FS": "50000",
+    "GS": "60000",
+};
+
+// valores dos registradores de deslocamento
+const ip = document.getElementById("valorEIP").textContent = "x";
+const sp = document.getElementById("valorESP").textContent = "x";
+const bp = document.getElementById("valorEBP").textContent = "x";
+const di = document.getElementById("valorEDI").textContent = "x";
+const si = document.getElementById("valorESI").textContent = "x";
+let contadorColunas = 2;
+
+// Função para adicionar uma nova coluna
+function adicionarColuna() {
+    let tabela = document.getElementById("tabelaRegDeslocamento");
+    let linhas = tabela.rows;
+
+    // Adiciona um novo cabeçalho (coluna no <thead>)
+    let th = document.createElement("th");
+    
+    linhas[0].appendChild(th);
+
+    // Adiciona células a cada linha da tabela (coluna no <tbody>)
+    for (let i = 1; i < linhas.length; i++) {
+        let novaCelula = linhas[i].insertCell(-1); // Insere no final da linha
+        novaCelula.textContent = "0x" + Math.floor(Math.random() * 0xFFFF).toString(16).toUpperCase(); // Valor aleatório
+    }
+
+    contadorColunas++; // Atualiza o contador para nomear corretamente as próximas colunas
 }
 
 // Inicializar a exibição da tabela
@@ -85,5 +115,10 @@ document.getElementById("removeButton").addEventListener("click", () => {
         atualizarTabelas();
     }
 });
+
+
+
+
+
 
 
